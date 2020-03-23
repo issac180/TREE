@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="babe076e-1648-4b87-9aa4-97571df8130a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/service/UserServiceImp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/dao/UserDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/dao/UserDaoImp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +211,7 @@
       <workItem from="1584944472804" duration="704000" />
       <workItem from="1584949067528" duration="1300000" />
       <workItem from="1584951795963" duration="598000" />
-      <workItem from="1584953228672" duration="7179000" />
+      <workItem from="1584953228672" duration="9108000" />
     </task>
     <servers />
   </component>
@@ -285,5 +287,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="83" y="14" width="642" height="801" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1584953810210" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1584963091795">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1584963091795" />
   </component>
 </project>
