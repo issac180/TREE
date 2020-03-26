@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>user</title>
+    <script src="jquery.js"></script>
+    <script type="text/javascript">
+        function cre() {
+            const account = document.getElementById("cre_account").value;
+            const name = document.getElementById("cre_name").value;
+            const password = document.getElementById("cre_password").value;
+            const data = {
+                user_account: account,
+                user_name: name,
+                user_password: password
+            };
+            console.log(data);
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:8080/user/create",
+                //data: data,
+                dataType: 'json',
+                headers: {
+                    user_account: account,//在header传参数，汉字会乱码出问题，如传汉字要做处理
+                    user_name: name,
+                    user_password: password
+                },
+                success: function (result) {
+
+                }
+            });
+        }
+
+        function upd() {
+            const account = document.getElementById("upd_account").value;
+            const name = document.getElementById("upd_name").value;
+            const password = document.getElementById("upd_password").value;
+            const data = {
+                user_account: account,
+                user_name: name,
+                user_password: password
+            };
+            console.log(data);
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:8080/user/update",
+                data: data,
+                dataType: 'json',
+                success: function (result) {
+
+                }
+            });
+        }
+
+        function del() {
+            const account = document.getElementById("del_account").value;
+            const data = {
+                user_account: account
+            };
+            console.log(data);
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:8080/account/delete",
+                data: data,
+                dataType: 'json',
+                success: function (result) {
+
+                }
+            });
+        }
+
+        function ret() {
+            const account = document.getElementById("ret_account").value;
+            const data = {
+                user_account: account
+            };
+            console.log(data);
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:8080/user/retrieve",
+                data: data,
+                dataType: 'json',
+                success: function (result) {
+                    console.log(result)
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+<div>
+    <input id="cre_account" placeholder="账号"/>
+    <input id="cre_name" placeholder="姓名"/>
+    <input id="cre_password" placeholder="密码"/>
+    <button onclick="cre()">添加</button>
+</div>
+<div>
+    <input id="upd_account" placeholder="账号"/>
+    <input id="upd_name" placeholder="姓名"/>
+    <input id="upd_password" placeholder="密码"/>
+    <button onclick="upd()">修改</button>
+</div>
+<div>
+    <input id="del_account" placeholder="账号"/>
+    <button onclick="del()">删除</button>
+</div>
+<div>
+    <input id="ret_account" placeholder="账号"/>
+    <button onclick="ret()">查询</button>
+</div>
+</body>
+</html>
