@@ -139,5 +139,14 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-test:5.2.4.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.xmlunit:xmlunit-core:2.6.3" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: io.projectreactor:reactor-test:3.3.3.RELEASE" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Desktop/mysql-connector-java-8.0.16/mysql-connector-java-8.0.16.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
