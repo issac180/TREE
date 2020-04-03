@@ -19,14 +19,14 @@ public class UserDaoImp implements UserDao {
             con = DriverManager.getConnection(url, username, password);
             //创建Connection对象，连通数据库
             String number = user.getUser_account();
-            String password1 = user.getUser_password();
+            String psd = user.getUser_password();
             String name = user.getUser_name();
             String sql = "insert into message(user_account,user_name,user_password) values(?,?,?)";
             pst = con.prepareStatement(sql);
             //创建PreparedStatement对象，打开sql语句（这里是insert语句）通道
             pst.setString(1, number);
             pst.setString(2, name);
-            pst.setString(3, password1);
+            pst.setString(3, psd);
             pst.executeUpdate();
             //具体执行相应的sql语句
         } catch (Exception e) {
@@ -133,11 +133,11 @@ public class UserDaoImp implements UserDao {
 
             String number = user.getUser_account();
             String name = user.getUser_name();
-            String password1 = user.getUser_password();
+            String psd = user.getUser_password();
             String sql = "update message set user_name=?,user_password=? where user_account=?";
             pst = con.prepareStatement(sql);
             pst.setString(1, name);
-            pst.setString(2, password1);
+            pst.setString(2, psd);
             pst.setString(3, number);
             pst.executeUpdate();
         } catch (Exception e) {

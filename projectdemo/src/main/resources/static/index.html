@@ -8,11 +8,11 @@
         function cre() {
             const account = document.getElementById("cre_account").value;
             const name = document.getElementById("cre_name").value;
-            const password = document.getElementById("cre_password").value;
+            const psd = document.getElementById("cre_password").value;
             const data = {
                 user_account: account,
                 user_name: name,
-                user_password: password
+                user_password: psd
             };
             console.log(data);
             $.ajax({
@@ -23,7 +23,7 @@
                 headers: {
                     user_account: account,//在header传参数，汉字会乱码出问题，如传汉字要做处理
                     user_name: name,
-                    user_password: password
+                    user_password: psd
                 },
                 success: function (result) {
 
@@ -34,11 +34,11 @@
         function upd() {
             const account = document.getElementById("upd_account").value;
             const name = document.getElementById("upd_name").value;
-            const password = document.getElementById("upd_password").value;
+            const psd = document.getElementById("upd_password").value;
             const data = {
                 user_account: account,
                 user_name: name,
-                user_password: password
+                user_password: psd
             };
             console.log(data);
             $.ajax({
