@@ -4,20 +4,20 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class DbUtil {
-    private String dbUrl = "jdbc:mysql://localhost:3306/test?useSSL=true&characterEncoding=utf-8&serverTimezone=GMT";
+    private static final String URL = "jdbc:mysql://localhost:3306/test?useSSL=true&characterEncoding=utf-8&serverTimezone=GMT";
 
-    private String dbUserName = "root";
-    private String dbPassword = "";
+    private static final String USERNAME = "root";
+    private static final String PASSWORD = "";
 
-    public Connection getCon() throws Exception {
+    public static Connection getCon() throws Exception {
         Class.forName("com.mysql.cj.jdbc.Driver");
-        Connection con = DriverManager.getConnection(dbUrl, dbUserName, dbPassword);
-        return con;
+        Connection conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+        return conn;
     }
 
-    public void closeCon(Connection con) throws Exception {
-        if (con != null) {
-            con.close();
+    public void closeCon(Connection conn) throws Exception {
+        if (conn != null) {
+            conn.close();
         }
     }
 

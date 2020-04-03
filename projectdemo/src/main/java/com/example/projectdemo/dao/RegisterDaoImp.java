@@ -6,17 +6,14 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import com.example.projectdemo.Tools.DbUtil;
 
 public class RegisterDaoImp implements RegisterDao {
     public void createUser(UserEntity user) {
         Connection con = null;
         PreparedStatement pst = null;
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            String url = "jdbc:mysql://localhost:3306/test?useSSL=true&characterEncoding=utf-8&serverTimezone=GMT";
-            String username = "root";
-            String password = "";
-            con = DriverManager.getConnection(url, username, password);
+            con = DbUtil.getCon();
             //创建Connection对象，连通数据库
             String number = user.getUser_account();
             String psd = user.getUser_password();
